@@ -16,9 +16,9 @@ public class Player : Actor
 
     private void ReadInput()
     {
-        float inputHorizontal = Input.GetAxis("Horizontal");
-        float inputVertical = Input.GetAxis("Vertical");
-        moveDir = new Vector2(inputVertical, inputHorizontal).normalized;
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+        float inputVertical = Input.GetAxisRaw("Vertical");
+        moveDir = new Vector2(inputHorizontal, inputVertical).normalized;
     }
 
     // move Actor based on input
