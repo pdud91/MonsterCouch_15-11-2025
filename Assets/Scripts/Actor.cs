@@ -16,7 +16,7 @@ public class Actor : MonoBehaviour
     {
         // move the game object
         Vector3 pos = transform.position;
-        Vector3 delta = direction * moveSpeed;
+        Vector3 delta = direction * moveSpeed * Time.deltaTime;
         Vector3 newPos = pos + delta;
 
 
@@ -33,7 +33,7 @@ public class Actor : MonoBehaviour
         if (newPos.y < boundsLowerLeft.y)
             newPos.y = boundsLowerLeft.y;
 
-        if (newPos.y < boundsUpperRight.y)
+        if (newPos.y > boundsUpperRight.y)
             newPos.y = boundsUpperRight.y;
 
 
