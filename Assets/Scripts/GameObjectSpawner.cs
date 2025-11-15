@@ -21,7 +21,7 @@ public class GameObjectSpawner : MonoBehaviour
 
     private Vector2 GetRandomPointInView()
     {
-        Vector2 randomViewPoint = new Vector2(Random.Range(0, 1), Random.Range(0, 1));
+        Vector2 randomViewPoint = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
         Vector2 worldPoint = Camera.main.ViewportToWorldPoint(randomViewPoint);
         return worldPoint;
     }
